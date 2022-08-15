@@ -1,0 +1,67 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _01._212
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            #region task1
+            //string fName = "Seisenbay";
+            //string mName = "Nurzhan";
+
+            //Console.WriteLine(fName);
+            //Console.WriteLine(mName);
+
+            Console.Write("Введите ФИО: ");
+            string userName = Console.ReadLine();
+
+            Console.Write("Введите год рождения: ");
+            string userAge = Console.ReadLine();
+
+            int currentAge = 2022;
+            int userAge_ = Convert.ToInt32(userAge);
+
+            int avalAge = currentAge - userAge_;
+
+            if (avalAge >= 18) { Console.WriteLine("Приветствую тебя " + userName + "!"); }
+            
+            else { Console.WriteLine("Еще молод"); }
+            #endregion
+
+            int el = 1000;
+            long el2 = el;
+
+            long el3 = 10;
+            int el4 = (int)el3;
+
+            object currentYear = "2022";
+            int el5 = Convert.ToInt32(currentYear);
+            int el6 = Int32.Parse(currentYear.ToString());
+
+            int el7 = 0;
+            bool result = Int32.TryParse(currentYear.ToString(), out el7);
+            if (result) { Console.WriteLine(); }
+            else { Console.WriteLine(); }
+    
+            DateTime date = DateTime.Now;
+            Console.WriteLine(date);
+
+            date = date.AddYears(5);
+            Console.WriteLine(date);
+            Console.WriteLine(date);
+
+
+            List<int> arr = new List<int>();
+
+            Exmpl01(arr, el5);
+        }
+    public static void Exmpl01(List<int> arr, int age)
+        {
+        }
+    }
+}
