@@ -1,0 +1,28 @@
+using System;
+
+namespace lesson_3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите число 1 ");
+            string first_number = Console.ReadLine();
+
+            Console.WriteLine();
+            Console.Write("ВВедите число 2 ");
+            string second_number = Console.ReadLine();
+
+            int all = 0;
+
+
+            foreach (char item in first_number)
+            {
+                int number1 = Convert.ToInt32(item.ToString());
+                all += number1;
+             
+            }
+            Console.WriteLine(all);
+        }
+    }
+}
