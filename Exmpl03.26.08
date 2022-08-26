@@ -1,0 +1,92 @@
+using System;
+
+namespace lesson_3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            
+        }
+    
+     static void exmpl04()
+        {
+            string text = Console.ReadLine();
+
+           
+            for (int i = 0; i < text.Length - 1; i++)
+            {
+            if(text[i] == text[i + 1])
+                {
+                   string letter = text[i].ToString();
+                    text = text.Replace(letter, "1");
+                }    
+            }
+            
+        }
+
+        static void exmpl05()
+        {
+            int[,] arr = new int[5, 5];
+
+            Random rnd = new Random();
+
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    arr[i, j] = rnd.Next(-100, 100);
+                }
+            }
+
+            int min = 10000;
+            int minI = 0;
+            int minJ = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    if (arr[i, j] > min)
+                    {
+                        min = arr[i, j];
+                        minI = i;
+                        minJ = j;
+                    }
+                }
+            }
+
+            int max = 0;
+            int maxI = 0;
+            int maxJ = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    if (arr[i, j] > min)
+                    {
+                        min = arr[i, j];
+                        maxI = i;
+                        maxJ = j;
+                    }
+                }
+            }
+
+            int summ = 0;
+          if(minI < maxJ&& minJ < maxJ)
+            {
+                for (int i = minI; i < maxI; i++)
+                {
+                    for (int j = minJ; j < maxJ; j++)
+                    {
+                        if(i != maxI && j != maxJ)
+                        {
+                            summ += arr[i, j];
+                        }
+                    }
+                }
+            }
+            Console.WriteLine(summ);
+        }
+    }    
+}
+
