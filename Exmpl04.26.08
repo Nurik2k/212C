@@ -1,0 +1,12 @@
+static void exmpl06()
+        {
+            string text = Console.ReadLine();
+
+            string[] words = text.Split(" ");
+            Console.WriteLine(words.Length);
+            foreach (string word in words)
+            {
+                Console.WriteLine(word);
+            }
+           
+        }
