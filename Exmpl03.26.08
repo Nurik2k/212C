@@ -9,21 +9,7 @@ namespace lesson_3
             
         }
     
-     static void exmpl04()
-        {
-            string text = Console.ReadLine();
 
-           
-            for (int i = 0; i < text.Length - 1; i++)
-            {
-            if(text[i] == text[i + 1])
-                {
-                   string letter = text[i].ToString();
-                    text = text.Replace(letter, "1");
-                }    
-            }
-            
-        }
 
         static void exmpl05()
         {
